@@ -1,0 +1,7 @@
+Bot.session
+__pycache__
+gdrivetoken
+*.log
+*.cmd
+*.session
+.vscode

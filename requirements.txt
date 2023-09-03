@@ -1,0 +1,5 @@
+telethon
+pdf2img
+aria2p
+Pillow
+requests
