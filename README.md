@@ -1,4 +1,7 @@
 # Telethon-based Telegram File Bot
+## A Mini-Project done by 2nd Year IT Student
+## Awarded 1st Prize in Project Expo, MVSREC - Dept. of IT 
+
 ## PRs are always welcome
 ## Key Features
 
