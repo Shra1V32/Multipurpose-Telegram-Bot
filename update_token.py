@@ -1,5 +1,5 @@
 import requests
-from constants import CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN
+from constants import GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN
 
 
 def genToken():
@@ -7,9 +7,9 @@ def genToken():
     response = requests.post(
         "https://oauth2.googleapis.com/token",
         data={
-            "client_id": CLIENT_ID,
-            "client_secret": CLIENT_SECRET,
-            "refresh_token": REFRESH_TOKEN,
+            "client_id": GDRIVE_CLIENT_ID,
+            "client_secret": GDRIVE_CLIENT_SECRET,
+            "refresh_token": GDRIVE_REFRESH_TOKEN,
             "grant_type": "refresh_token",
         },
     )

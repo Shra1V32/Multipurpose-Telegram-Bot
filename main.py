@@ -55,7 +55,7 @@ commands = {
         "description": "To cancel your Download, Give a an argument its GID to delete"
     },
     "/cancelall": {
-        "description": "To cancell all the downloads & uploads which are live"
+        "description": "To cancel all the downloads & uploads which are live"
     },
 }
 
@@ -71,6 +71,15 @@ class EmptyQueueInfo(Exception):
 
 logging.basicConfig(filename=f'session-{str(time.time()).split(".")[0]}.log', level=logging.INFO, format='%(asctime)s %(levelname)s:%(message)s')
 # Start up client
+CREDS_REQ = False
+if API_ID == "":
+    raise Exception("Telegram API ID can't be left empty")
+if API_HASH == "":
+    raise Exception("Telegram API Hash can't be left empty")
+if BOT_TOKEN == "":
+    raise Exception("Telegram Bot Token can't be left empty")
+    
+#    raise Exception("Please edit constants.py")
 client = TelegramClient("Shra1V32", API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 client.start()
 
