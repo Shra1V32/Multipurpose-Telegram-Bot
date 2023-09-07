@@ -21,6 +21,34 @@
 
 - **Voice-to-Text Conversion:** Users can tag voice messages, and the bot will analyze the audio to provide a text transcription.
 
+## Commands
+1. `/dl [URL]`: Download and upload a file directly to Google Drive. Replace `[URL]` with the URL of the file you want to download.
+
+2. `/ytdl [YouTube URL]`: Download a YouTube video and upload it to Google Drive. Replace `[YouTube URL]` with the URL of the YouTube video.
+
+3. `/convert`: Convert the sent images into a single PDF.
+
+4. `/pdf2img`: Convert a tagged PDF file into a series of images.
+
+5. `/img2pdf`: Prepare images for conversion to PDF. This command is used to collect images for later conversion.
+
+6. `/cancel [GID]`: Cancel a specific download or upload by specifying its GID (Group ID).
+
+7. `/cancelall`: Cancel all ongoing downloads and uploads.
+
+8. `/start`: Check if the bot is running.
+
+9. `/quote`: Fetch a random quote.
+
+10. `/run [command]`: Execute shell commands (only authorized users). Replace `[command]` with the command you want to run.
+
+11. `/ping`: Check the bot's network latency.
+
+12. `/help`: Display a list of available commands and their descriptions.
+
+13. `/voice2text`: Convert a tagged voice message to text.
+
+
 ## Requirements
 - Python (version 3.11)
 - A Linux Machine (For all the features to work)
@@ -29,7 +57,7 @@
 
 1. Clone this repository to your local machine.
 
-2. Configure the necessary API credentials in the `constants.py` file.
+2. Configure the API_ID, API_HASH, and BOT_TOKEN in the `constants.py` with your values.
 
 3. Install required dependencies using the commands provided below:
 ```shell
