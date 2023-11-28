@@ -72,17 +72,12 @@ class EmptyQueueInfo(Exception):
 logging.basicConfig(filename=f'session-{str(time.time()).split(".")[0]}.log', level=logging.INFO, format='%(asctime)s %(levelname)s:%(message)s')
 # Start up client
 CREDS_REQ = False
-if API_ID == "":
-    raise Exception("Telegram API ID can't be left empty")
-if API_HASH == "":
-    raise Exception("Telegram API Hash can't be left empty")
-if BOT_TOKEN == "":
-    raise Exception("Telegram Bot Token can't be left empty")
-    
-#    raise Exception("Please edit constants.py")
-client = TelegramClient("Shra1V32", API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+assert API_ID, "Telegram API ID can't be left empty"
+assert API_HASH, "Telegram API Hash can't be left empty"
+assert BOT_TOKEN, "Telegram Bot Token can't be left empty"
+client = TelegramClient("AdvancedTelegramBot", API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 client.start()
-
+os.system("bash ./aria.sh")
 ########### Creating objects ##########
 upload = upload_gdrive.getUploads()
 p = Thread(target=upload.cronUpdateGDriveToken)

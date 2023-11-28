@@ -52,6 +52,7 @@
 ## Requirements
 - Python (version 3.11)
 - A Linux Machine (For all the features to work)
+
 ## Retrieving API Hash Values
 
 ### Telegram
@@ -94,7 +95,6 @@ sudo ./setup.sh
 
 4. Interact with the bot through Telegram using the provided commands.
 ```shell
-./aria.sh
 python3.11 ./main.py
 ```
 
