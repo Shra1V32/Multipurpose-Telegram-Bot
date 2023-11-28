@@ -52,6 +52,34 @@
 ## Requirements
 - Python (version 3.11)
 - A Linux Machine (For all the features to work)
+## Retrieving API Hash Values
+
+### Telegram
+
+To retrieve the API hash value from Telegram, follow these steps:
+
+1. Visit [Telegram's API development tools](https://my.telegram.org/apps).
+2. Log in with your Telegram account. Note: You'll receive a code in your Telegram messages.
+3. After logging in, click on 'API development tools'.
+4. Fill in the required fields. If you're not sure about these fields, you can enter dummy data.
+5. After filling in the details, you'll be provided with the 'API_ID' and 'API_HASH'. Keep these safe.
+
+### Google Drive
+
+To retrieve the API hash value from Google Drive, follow these steps:
+
+1. Visit the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project or select an existing one.
+3. Go to 'APIs & Services' > 'Library'.
+4. Search for 'Google Drive API' and enable it for your project.
+5. Go to 'APIs & Services' > 'Credentials'.
+6. Click on 'Create Credentials' > 'API key'. Your API key will be displayed. Keep it safe.
+7. For the Client ID, click on 'Create Credentials' > 'OAuth client ID'.
+8. Configure the OAuth consent screen if required.
+9. For 'Application type', select 'Web application'.
+10. Enter a name, and under 'Authorized redirect URIs', add 'https://developers.google.com/oauthplayground'.
+11. Click 'Create'. Your client ID will be displayed. Keep it safe.
+12. Open the downloaded credentials file and fill in the details as required in `constats.py`
 
 ## Usage
 
