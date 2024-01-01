@@ -56,10 +56,7 @@ class YTDL:
         return self.completedDownloads
 
     async def getStatusOfAllDownloads(self):
-        dataset = []
-        for downData in statusBasedOnGID.values():
-            dataset.append(downData)
-        return dataset
+        return [downData for downData in statusBasedOnGID.values()]
 
     def checkStatus(self, thread_obj):
         self.thread_obj = thread_obj

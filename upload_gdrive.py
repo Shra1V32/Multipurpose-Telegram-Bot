@@ -34,20 +34,12 @@ class getUploads:
 
     @classmethod
     async def genRandomString(cls):
-        gen = []
-        chars = "1234567890abcdef"
-        for _ in range(0, 16):
-            gen.append(chars[random.randint(0, len(chars) - 1)])
-        return "".join(gen)
+        return "".join(random.choice('1234567890abcdef') for _ in range(16))
 
     
     @classmethod
     def genRandomStringSync(cls):
-        gen = []
-        chars = "1234567890abcdef"
-        for _ in range(0, 16):
-            gen.append(chars[random.randint(0, len(chars) - 1)])
-        return "".join(gen)
+        return "".join([random.choice("1234567890abcdef") for _ in range(16)])
 
     
     @classmethod
@@ -74,10 +66,7 @@ class getUploads:
         return gidsWithFilename[self.gid]["filename"]
 
     async def getListOfGids(self):
-        listOfGids = []
-        for i in gidsWithFilename:
-            listOfGids.append(i.split(":")[0])
-        return listOfGids
+        return [i.split(":")[0] for i in gidsWithFilename]
 
     async def getFileId(self, url):
         self.url = url

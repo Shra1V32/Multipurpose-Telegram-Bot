@@ -37,18 +37,11 @@ class AriaHelper():
         """
         Function to get the list of ETAs for the downloads
         """
-        l = []
-        downloads = aria2.get_downloads()
-        for download in downloads:
-            l.append(download.eta_string())
-        return l
+        return [download.eta_string() for download in aria2.get_downloads()]
 
     async def getNames(self):
         ''' Function to get the Names of the ongoing downloads '''
-        downloads = []
-        for idown in aria2.get_downloads():
-            downloads.append(idown.name)
-        return downloads
+        return [idown.name for idown in aria2.get_downloads()]
 
     async def AddDownload(self, link: str):
         ''' Function to add the specific URL to the download lists '''
