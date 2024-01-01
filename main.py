@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
-from telethon import TelegramClient, events, sync
+from telethon import TelegramClient, events
 from telethon.errors.rpcerrorlist import (
     MessageIdInvalidError,
     MessageEmptyError,
     MessageNotModifiedError,
 )
 from constants import API_ID, API_HASH, BOT_TOKEN
-from multiprocessing.pool import ThreadPool as Pool
 import os
 import time
-from subprocess import check_output, Popen, PIPE
+from subprocess import check_output, PIPE
 import aria_helper
 import asyncio
 import upload_gdrive
 from threading import Thread
 from PIL import Image
 from pdf2image import convert_from_path
-from aria_helper import yt_dict
 import requests
 import random
 import yt_handler
